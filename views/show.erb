@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon fighter!</title>
+  </head>
+  <h1><%= @pokemon.name %>! He will wreck you!</h1>
+  <h2> <%= @pokemon.cp %> </h2>
+  <h2> <%= @pokemon.poke_type %> </h3>
+  <style>
+  h1{
+    color: red;
+  }
+  h2{
+    color: purple;
+  }
+  </style>
+  <body>
+    <img class="pokemon" src='<%= @pokemon.img_url %>'
+  </body>
+</html>

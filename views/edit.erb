@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon Edit</title>
+  </head>
+  <h1>EDIT YOUR POKEMON!!!</h1>
+  <style>
+  h1{
+    color: red;
+  }
+  form {
+    font-size: 30px;
+    color: blue;
+  }
+  </style>
+  <body>
+
+    <form action ="/pokemons<%= @pokemon.id %>" method="post">
+      <input type="hidden" name="_method" value="put" />
+
+      <label for="pokemon[name]">Name:</label>
+      <input name="pokemon[name]" value="<%= @pokemon.name %>">
+
+      <label for="pokemon[cp]">CP:</label>
+      <input name="pokemon[cp]" value="<%= @pokemon.cp %>">
+
+      <label for="pokemon[poke_type]">poke_type:</label>
+      <input name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
+
+      <input type="submit" value="edit">
+      </form>
+
+      <form action="/pokemons/<%= @pokemon.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input class="button-delete" type="submit" value="Delete!">
+      <img class="ash" src="http://www.pngmart.com/files/2/Pokemon-Ash-PNG-HD.png" />
+      </form>
+  </body>
+
+</html>
